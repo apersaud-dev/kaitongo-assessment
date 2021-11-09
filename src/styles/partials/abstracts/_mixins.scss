@@ -1,0 +1,81 @@
+@import './variables';
+@import '../base//typography';
+
+@mixin medium-breakpoint {
+    @media screen and (min-width: $medium-breakpoint) {
+        @content;
+    }
+}
+
+@mixin large-breakpoint{
+    @media screen and (min-width: $large-breakpoint) {
+        @content;
+    }
+}
+
+@mixin max-size {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+@mixin h1-font {
+    font: 2.25rem $semi-bold-font;
+}
+
+@mixin description-font {
+    font: 1.25rem $light-font;
+}
+
+@mixin body-font {
+    font: 1rem $regular-font;
+    color: $grey;
+}
+
+@mixin form-heading-font {
+    font: 1.5rem $semi-bold-font;
+    color: $slate;
+    margin: 0.5rem 0 0.75rem;
+}
+
+@mixin form-label-font {
+    font: 1rem $regular-font;
+    margin-bottom: 0.5rem;
+}
+
+@mixin form-input-font {
+    font: 1rem $light-font;
+}
+
+@mixin form-caption-font {
+    font: 0.75rem $light-font;
+    color: $light-grey;
+}
+
+@mixin form-input {
+    padding: 0.25rem 0.5rem;
+    border: 1.5px solid $dark-blue;
+}
+
+@mixin button {
+    background-color: $primary-blue;
+    font: 1.25rem $semi-bold-font;
+    color: $dark-blue;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid $primary-blue;
+    margin-top: 1.5rem;
+    box-shadow: 0 3px 6px 0 rgba(6, 67, 108, 0.18);
+    transition: 0.4s;
+
+    &:hover:enabled {
+        color: #ebeced;
+        transition: all 0.4s;
+    }
+
+    &:disabled {
+        opacity: 50%;
+        cursor: not-allowed;
+    }
+}
+
+// 36, 24, 20, 16, 12
